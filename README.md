@@ -1,2 +1,2 @@
 # hana-snippets
-Code snippets for quick prototypes on HANA
+Code snippets to build quick prototypes on HANA
