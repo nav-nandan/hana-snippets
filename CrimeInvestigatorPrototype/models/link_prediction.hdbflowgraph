@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="_RpKTgDzkEea-w61EihYQXw" name="LINK_PREDICTION" generateProcedure="true" generateTask="false" targetSchema="DATA_EXPLORER">
+  <annotations xmi:id="_RpKTgTzkEea-w61EihYQXw" key="sap.afm.layout">
+    <annotations xmi:id="_RpKTgjzkEea-w61EihYQXw" key="x" value="10"/>
+    <annotations xmi:id="_RpKTgzzkEea-w61EihYQXw" key="y" value="10"/>
+  </annotations>
+  <annotations xmi:id="_RpKThDzkEea-w61EihYQXw" key="sap.afm.palette" value="">
+    <annotations xmi:id="_RpKThTzkEea-w61EihYQXw" key="additions" value=""/>
+  </annotations>
+  <annotations xmi:id="_XwXiUDzkEea-w61EihYQXw" key="sap.afm.nodeType" value="ContainerNode"/>
+  <annotations xmi:id="_XwZ-kDzkEea-w61EihYQXw" key="sap.afm.nodeInputs"/>
+  <annotations xmi:id="_XwbMsDzkEea-w61EihYQXw" key="sap.afm.nodeOutputs"/>
+  <tableMappings xmi:id="_MazFoFHgEeegpfCUkGN4vw" source="_Sq5dZTzkEea-w61EihYQXw" target="_MC3t2FHgEeegpfCUkGN4vw">
+    <attributeMappings xmi:id="_MazFoVHgEeegpfCUkGN4vw" source="_Sq5dZjzkEea-w61EihYQXw" target="_MC3t2VHgEeegpfCUkGN4vw"/>
+    <attributeMappings xmi:id="_MazFolHgEeegpfCUkGN4vw" source="_Sq5daDzkEea-w61EihYQXw" target="_MC3t2lHgEeegpfCUkGN4vw"/>
+    <attributeMappings xmi:id="_MazFo1HgEeegpfCUkGN4vw" source="_Sq5dajzkEea-w61EihYQXw" target="_MC3t21HgEeegpfCUkGN4vw"/>
+  </tableMappings>
+  <tableMappings xmi:id="_ShsycFHgEeegpfCUkGN4vw" source="_R2bA2FHgEeegpfCUkGN4vw" target="_Sq5dVzzkEea-w61EihYQXw">
+    <attributeMappings xmi:id="_ShsycVHgEeegpfCUkGN4vw" source="_R2bA2VHgEeegpfCUkGN4vw" target="_Sq5dWDzkEea-w61EihYQXw"/>
+    <attributeMappings xmi:id="_ShsyclHgEeegpfCUkGN4vw" source="_R2bA2lHgEeegpfCUkGN4vw" target="_Sq5dWjzkEea-w61EihYQXw"/>
+  </tableMappings>
+  <nodes xsi:type="flowgraph:FunctionNode" xmi:id="_Sq5dUDzkEea-w61EihYQXw" name="LINKPREDICTION" areaName="AFLPAL" functionName="LINKPREDICTION" functionCategory="VAR_COLUMN">
+    <annotations xmi:id="_Sq5dUTzkEea-w61EihYQXw" key="sap.afm.description" value="The Link Prediction algorithm provides four methods to compute the distance of any two nodes using existing links in a social network."/>
+    <annotations xmi:id="_Sq5dUjzkEea-w61EihYQXw" key="sap.afm.displayName" value="Link Prediction"/>
+    <annotations xmi:id="_Sq5dUzzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+    <annotations xmi:id="_Sq5dVDzkEea-w61EihYQXw" key="sap.afm.layout">
+      <annotations xmi:id="_Sq5dVTzkEea-w61EihYQXw" key="x" value="284"/>
+      <annotations xmi:id="_Sq5dVjzkEea-w61EihYQXw" key="y" value="107"/>
+    </annotations>
+    <annotations xmi:id="_Xwca0DzkEea-w61EihYQXw" key="sap.afm.nodeType" value="FunctionNode"/>
+    <annotations xmi:id="_XweQADzkEea-w61EihYQXw" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_XwfeIDzkEea-w61EihYQXw" key="INPUT" value="DATA"/>
+      <annotations xmi:id="_XwgsQDzkEea-w61EihYQXw" key="PARAMS" value=""/>
+    </annotations>
+    <annotations xmi:id="_XwlkwDzkEea-w61EihYQXw" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_XwnZ8DzkEea-w61EihYQXw" key="RESULT" value="DATA_2"/>
+    </annotations>
+    <inputs xmi:id="_Sq5dVzzkEea-w61EihYQXw" name="INPUT" regex="[IS][IS]" kind="TABLE">
+      <attributes xmi:id="_Sq5dWDzkEea-w61EihYQXw" name="NODE1" type="VARCHAR" nullable="false" length="5000" scale="0">
+        <annotations xmi:id="_Sq5dWTzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+      <attributes xmi:id="_Sq5dWjzkEea-w61EihYQXw" name="NODE2" type="VARCHAR" nullable="false" length="5000" scale="0">
+        <annotations xmi:id="_Sq5dWzzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+    </inputs>
+    <inputs xmi:id="_Sq5dXDzkEea-w61EihYQXw" name="PARAMS" regex="SIDS" kind="TABLE">
+      <attributes xmi:id="_Sq5dXTzkEea-w61EihYQXw" name="NAME" type="VARCHAR" nullable="true" length="50" scale="0">
+        <annotations xmi:id="_Sq5dXjzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+      <attributes xmi:id="_Sq5dXzzkEea-w61EihYQXw" name="INTARGS" type="INTEGER" nullable="true" length="0" scale="0">
+        <annotations xmi:id="_Sq5dYDzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+      <attributes xmi:id="_Sq5dYTzkEea-w61EihYQXw" name="DOUBLEARGS" type="DOUBLE" nullable="true" length="0" scale="0">
+        <annotations xmi:id="_Sq5dYjzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+      <attributes xmi:id="_Sq5dYzzkEea-w61EihYQXw" name="STRINGARGS" type="VARCHAR" nullable="true" length="100" scale="0">
+        <annotations xmi:id="_Sq5dZDzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="_Sq5dZTzkEea-w61EihYQXw" name="RESULT" regex="[IS][IS]D" kind="TABLE">
+      <attributes xmi:id="_Sq5dZjzkEea-w61EihYQXw" name="NODE1" type="VARCHAR" nullable="false" length="5000" scale="0">
+        <annotations xmi:id="_Sq5dZzzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+      <attributes xmi:id="_Sq5daDzkEea-w61EihYQXw" name="NODE2" type="VARCHAR" nullable="false" length="5000" scale="0">
+        <annotations xmi:id="_Sq5daTzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+      <attributes xmi:id="_Sq5dajzkEea-w61EihYQXw" name="PREDICTION_SCORE" type="DOUBLE" nullable="false" length="0" scale="0">
+        <annotations xmi:id="_Sq5dazzkEea-w61EihYQXw" key="sap.afm.isReadOnly" value="true"/>
+      </attributes>
+    </outputs>
+    <tables xmi:id="_Sq5dbDzkEea-w61EihYQXw" type="_Sq5dXDzkEea-w61EihYQXw" active="true">
+      <rows xmi:id="_Sq5dbTzkEea-w61EihYQXw">
+        <values>&quot;THREAD_NUMBER&quot;</values>
+        <values>1</values>
+        <values>NULL</values>
+        <values>NULL</values>
+      </rows>
+      <rows xmi:id="_Sq5dbjzkEea-w61EihYQXw">
+        <values>&quot;METHOD&quot;</values>
+        <values>2</values>
+        <values>NULL</values>
+        <values>NULL</values>
+      </rows>
+      <rows xmi:id="_Sq5dbzzkEea-w61EihYQXw">
+        <values>&quot;BETA&quot;</values>
+        <values>NULL</values>
+        <values>0.005</values>
+        <values>NULL</values>
+      </rows>
+      <rows xmi:id="_Sq5dcDzkEea-w61EihYQXw">
+        <values>&quot;MIN_SCORE&quot;</values>
+        <values>NULL</values>
+        <values>0</values>
+        <values>NULL</values>
+      </rows>
+    </tables>
+  </nodes>
+  <nodes xsi:type="flowgraph:DataNode" xmi:id="_MC3t0FHgEeegpfCUkGN4vw" name="OUTPUT_LINK_PREDICTION" type="DATABASE_TABLE" authoringSchemaName="DATA_EXPLORER" catalogObjectName="OUTPUT_LINK_PREDICTION" dataLayout="COLUMN" truncateTable="false">
+    <annotations xmi:id="_MC3t0VHgEeegpfCUkGN4vw" key="sap.afm.description" value="Write data to a catalog object"/>
+    <annotations xmi:id="_MC3t0lHgEeegpfCUkGN4vw" key="sap.afm.displayName" value="Data Sink"/>
+    <annotations xmi:id="_MC3t01HgEeegpfCUkGN4vw" key="sap.afm.layout">
+      <annotations xmi:id="_MC3t1FHgEeegpfCUkGN4vw" key="x" value="449"/>
+      <annotations xmi:id="_MC3t1VHgEeegpfCUkGN4vw" key="y" value="225"/>
+      <annotations xmi:id="_MC3t1lHgEeegpfCUkGN4vw" key="width" value="100"/>
+      <annotations xmi:id="_MC3t11HgEeegpfCUkGN4vw" key="height" value="64"/>
+    </annotations>
+    <annotations xmi:id="_TB3gQFHgEeegpfCUkGN4vw" key="sap.afm.nodeType" value="DataNode"/>
+    <annotations xmi:id="_TB3gQVHgEeegpfCUkGN4vw" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_TB3gQlHgEeegpfCUkGN4vw" key="DATA_2" value="RESULT"/>
+    </annotations>
+    <annotations xmi:id="_TB3gQ1HgEeegpfCUkGN4vw" key="sap.afm.nodeOutputs"/>
+    <inputs xmi:id="_MC3t2FHgEeegpfCUkGN4vw" name="DATA_2" kind="TABLE">
+      <attributes xmi:id="_MC3t2VHgEeegpfCUkGN4vw" name="NODE1" type="VARCHAR" nullable="true" length="5000" scale="0"/>
+      <attributes xmi:id="_MC3t2lHgEeegpfCUkGN4vw" name="NODE2" type="VARCHAR" nullable="true" length="5000" scale="0"/>
+      <attributes xmi:id="_MC3t21HgEeegpfCUkGN4vw" name="PREDICTION_SCORE" type="DOUBLE" nullable="true" length="0" scale="0"/>
+    </inputs>
+  </nodes>
+  <nodes xsi:type="flowgraph:DataNode" xmi:id="_R2bA0FHgEeegpfCUkGN4vw" name="INPUT_LINK_PREDICTION" type="DATABASE_TABLE" authoringSchemaName="DATA_EXPLORER" catalogObjectName="INPUT_LINK_PREDICTION" dataLayout="COLUMN" truncateTable="false">
+    <annotations xmi:id="_R2bA0VHgEeegpfCUkGN4vw" key="sap.afm.description" value="Read data from a catalog or repository object"/>
+    <annotations xmi:id="_R2bA0lHgEeegpfCUkGN4vw" key="sap.afm.displayName" value="Data Source"/>
+    <annotations xmi:id="_R2bA01HgEeegpfCUkGN4vw" key="sap.afm.layout">
+      <annotations xmi:id="_R2bA1FHgEeegpfCUkGN4vw" key="x" value="105"/>
+      <annotations xmi:id="_R2bA1VHgEeegpfCUkGN4vw" key="y" value="159"/>
+      <annotations xmi:id="_R2bA1lHgEeegpfCUkGN4vw" key="width" value="100"/>
+      <annotations xmi:id="_R2bA11HgEeegpfCUkGN4vw" key="height" value="64"/>
+    </annotations>
+    <annotations xmi:id="_TB3gRFHgEeegpfCUkGN4vw" key="sap.afm.nodeType" value="DataNode"/>
+    <annotations xmi:id="_TB3gRVHgEeegpfCUkGN4vw" key="sap.afm.nodeInputs"/>
+    <annotations xmi:id="_TB3gRlHgEeegpfCUkGN4vw" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_TB3gR1HgEeegpfCUkGN4vw" key="DATA" value="INPUT"/>
+    </annotations>
+    <outputs xmi:id="_R2bA2FHgEeegpfCUkGN4vw" name="DATA" kind="TABLE">
+      <attributes xmi:id="_R2bA2VHgEeegpfCUkGN4vw" name="NODE1" type="VARCHAR" nullable="false" length="5000" scale="0"/>
+      <attributes xmi:id="_R2bA2lHgEeegpfCUkGN4vw" name="NODE2" type="VARCHAR" nullable="false" length="5000" scale="0"/>
+    </outputs>
+  </nodes>
+</flowgraph:ContainerNode>
