@@ -1,0 +1,58 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<center>
+  <input type="file" onchange="preview_file()">
+</center>
+<br>
+<center>
+  <img id="uploaded_image" height="200" / >
+  <img id="retrieved_image" height="200" / >
+  <div id="details"></div>
+</center>
+<br>
+<center>
+  <img id="loading_spinner" src="loading.gif" width="100" , height="100" / >
+</center>
+<script>
+
+$(document).ready(function() {
+  $("#loading_spinner").hide();
+});
+
+var input_image = "";
+
+function preview_file() {
+
+  $("#retrieved_image").hide();
+  $("#details").empty();
+
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.addEventListener("load", function () {
+    preview.src = reader.result;
+  }, false);
+
+  reader.onloadend = function () {
+	  var fileName = file.name;
+    $("#loading_spinner").show();
+	  $.post('http://localhost:5000/process_image', { data: reader.result, name: fileName }, function(result) {
+      $("#loading_spinner").hide();
+  		$("#retrieved_image").attr('src', 'data:image/png;base64,' + result[5]);
+      $("#retrieved_image").show();
+      $("#details").html('CONVICT_ID: ' + result[0] + '<br>' + 'CONVICT_NAME: ' + result[1] + '<br>' + 'DOB: ' + result[2]
+                                + '<br>' + 'CHARGE: ' + result[3] + '<br>' + 'CHARGED_TIME: ' + result[4]);
+  	});
+  };
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+</script>
+</body>
+</html>
